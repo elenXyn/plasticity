@@ -1,0 +1,513 @@
+
+
+@charset "UTF-8";
+
+/* ------------------------------------------------ 1. HTML RESETS */
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+html {
+	height: 100%;
+}
+body {
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: normal;
+    cursor: default;
+    min-height: 100%;
+    border-left: 8px solid rgb(250, 214, 18);
+	border-right: 8px solid rgb(250, 214, 18);
+}
+functions,
+sup {
+    display: none; 
+}
+section, div,
+object, button, table,
+del, dfn, ins, kbd, var,
+form, fieldset, figure, figcaption, caption,
+label, legend, output,
+samp, small, strike, sub,
+article, aside, details, summary, 
+footer, header, menu, nav {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+canvas { 
+   vertical-align: top;
+   padding: 10px 0;
+}
+select {
+    border: none;
+    outline: 0;
+    cursor: pointer;
+}
+fieldset {
+    border: none;
+    outline: 0;
+}
+figure {
+    transition: 0.4s all ease-in-out;
+    -ms-transition: 0.4s all ease-in-out;
+    -webkit-transition: 0.4s all ease-in-out;
+    -moz-transition: 0.4s all ease-in-out;
+    -o-transition: 0.4s all ease-in-out;
+}
+span {
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+img {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: 0;
+} 
+iframe, 
+audio, 
+video,
+h1, h2, h3, h4, h5, h6,
+blockquote, pre, a,
+address, code, 
+strong, em, p {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+ul, li { 
+    list-style: none;
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+    outline: 0;
+    border: none; 
+}
+input {
+    border: 0;
+    outline: 0;
+}
+textarea {
+    overflow: auto;
+    vertical-align: top; 
+    border: 0;
+    resize: none;
+    outline: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0; 
+}
+br {
+    display: block;
+    margin: 7px 0;
+    line-height: 22px;
+    content: " ";
+}
+a, 
+button,
+.btn {
+    transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    text-decoration: none;
+    cursor: pointer;
+    border: none; 
+    outline: 0;
+}
+a {
+    font: 400 16px/25px 'Advent Pro', sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    color: #28282d;
+}
+    a:hover {
+        text-decoration: line-through;
+        color: rgb(250, 214, 18);
+    }
+.pace-done #page {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+    filter: alpha(opacity=1);
+    opacity: 1;
+}
+
+.clear-both {
+    clear: both;
+}
+
+/* ------------------ 3.1. CONTAINERS */
+
+.header {
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 28px 0 20px 0;
+}
+.main-container {
+    max-width: 980px; /*do it 1280 for 3 projects per line*/
+    margin: 0 auto;
+}
+#project .main-container,
+#bio .main-container  {
+    max-width: 640px;
+}
+#error404 .main-container {
+    text-align: center;
+}
+.left-container {
+	transform: rotate(-90deg);
+    position: fixed;
+    top: 50%;
+    left: -49px;
+    z-index: 1000;
+    padding: 0;
+}
+.right-container {
+	transform: rotate(90deg);
+    position: fixed;
+    top: 50%;
+    right: 40px;
+    z-index: 1000;
+    padding: 0;
+}
+.inside-column {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+.grid {
+	text-align: center;
+}
+
+/* ------------------ 3.2. FONTS 
+
+@font-face {
+    font-family: 'Advent Pro';
+    src: url('../fonts/AdventPro-Bold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AdventPro Regular';
+    src: url('../fonts/AdventPro-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AdventPro Light';
+    src: url('../fonts/AdventPro-Light.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
+/* ------------------ 3.7. COLORS */
+.black {
+    color: #000; 
+}
+.dark {
+    color: #28282d; 
+}
+.dark-70 {
+    color: #68686c; 
+}
+.dark-60 {
+    color: #7e7e81; 
+}
+.dark-50 {
+    color: #939396; 
+}
+.dark-40 {
+    color: #a9a9ab; 
+}
+.dark-20 {
+    color: #d4d4d5; 
+}
+.light-gray {
+    color: #f4f4f4; 
+}
+.bg-light-gray {
+    background-color: #f4f4f4;
+}
+.pink {
+    color: #ecbfc2; 
+}
+.white {
+    color: #fff;
+}
+.bg-white{
+    background-color: #fff;
+}
+/* ------------------ 3.8. TEXT */
+
+p {
+    font: 400 16px/25px 'Advent Pro', sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    color: #939396;
+}
+h1 {
+    font: 700 27px/40px 'Advent Pro', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #28282d;
+    letter-spacing: 3px;
+}
+    h1 a {
+        color: #28282d;
+    }
+h2 {
+    font: 700 22px/40px 'Advent Pro', sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    color: #28282d;
+}
+h3,
+a span, 
+a span {
+    font: 400 19px/25px 'Advent Pro', sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    color: #28282d;
+}
+    a:hover {
+        text-decoration: line-through;
+        color: rgb(250, 214, 18);
+     }
+    h3.exhibitions {
+        padding-top: 20px;
+    }
+p a {
+    display: inline;
+}
+    p a span {
+        font: 400 16px/25px 'Advent Pro', sans-serif;
+    }
+
+/* ------------------ 3.8. Other elements */
+
+
+
+.text-center {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+.project-item {
+	display: inline-block;
+	width: 350px;
+    margin: 10px;
+    background: #fff;
+    box-sizing: border-box;
+    position: relative;
+    border: 3px solid transparent;
+    border-radius: 0;
+}
+	.project-item img {
+		width: 100%;
+		box-sizing: border-box;
+	    position: relative;
+	    border-radius: 0;
+	    transition: 0.4s box-shadow ease-in-out;
+	    -ms-transition: 0.4s box-shadow ease-in-out;
+	    -webkit-transition: 0.4s box-shadow ease-in-out;
+	    -moz-transition: 0.4s box-shadow ease-in-out;
+	    -o-transition: 0.4s box-shadow ease-in-out;
+	    box-shadow: 5px 5px 15px #c1c1c1;
+	}
+		.project-item-link:hover img {
+			border: 0;
+		}
+	.project-item-link .project-item-name span {
+		transition: 0.2s box-shadow ease-in-out;
+    	-ms-transition: 0.2s box-shadow ease-in-out;
+    	-webkit-transition: 0.2s box-shadow ease-in-out;
+    	-moz-transition: 0.2s box-shadow ease-in-out;
+    	-o-transition: 0.2s box-shadow ease-in-out;
+	}	
+		.project-item-link:hover .project-item-name {
+			text-decoration: line-through;
+			color: rgb(250, 214, 18);
+		}	
+	.project-item h2 {
+		font: 400 16px/17px 'Advent Pro',sans-serif;
+	    color: #28282d;
+	    text-align: center;
+	    padding: 10px 20px;
+	    height: 54px;
+	    overflow: hidden;
+	    box-sizing: border-box;
+	    display: inline-block;
+	    width: 100%;
+	}
+#project .main-container img {
+	width: 100%;
+    margin: 10px 0;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 0;
+    transition: 0.4s box-shadow ease-in-out;
+    -ms-transition: 0.4s box-shadow ease-in-out;
+    -webkit-transition: 0.4s box-shadow ease-in-out;
+    -moz-transition: 0.4s box-shadow ease-in-out;
+    -o-transition: 0.4s box-shadow ease-in-out;
+    box-shadow: 5px 5px 15px #c1c1c1;
+}
+.project-item-name {
+    padding: 10px 0;
+}
+.project-description {
+	padding: 10px 0;
+}
+#bio #sketch-holder {
+    text-align: center;
+}
+#error404 img {
+  display: inline-block;
+  width: 400px;  
+}
+.footer {
+	padding: 25px 0;
+}
+	.footer ul {
+		width: 100%;
+		text-align: center;
+    }
+        #index .footer ul {
+            position: relative;
+            bottom: auto;
+            z-index: 1000;
+        }
+		.footer ul li {
+			display: inline-block;
+			padding: 0 10px;
+		}
+			.footer li a {
+				font: 400 17px/25px 'Advent Pro', sans-serif;
+			    text-decoration: none;
+			    text-transform: none;
+			    color: #939396;
+			}
+                .footer li a span {
+                   font: 400 16px/25px 'Advent Pro', sans-serif;
+                }
+				.footer li a:hover {
+					color: #28282d;
+				}
+		.footer ul li.footer-hidden {
+			display: none;
+		}	
+			.footer ul li.footer-hidden a:hover {
+				color: rgb(250, 214, 18);
+				text-decoration: line-through;
+			}	
+
+
+
+	/* ------------------------------------------------ 1. Laptops */
+
+@media only screen and (max-width: 1300px) {
+    
+    .main-container {
+        max-width: 980px;
+    }
+
+}
+
+
+	/* ------------------------------------------------ 2. Tablets */
+
+@media only screen and (max-width: 992px) {
+    
+    .main-container {
+        max-width: 760px;
+        margin: 0 auto;
+    }
+    .right-container,
+    .left-container {
+    	display: none;
+    }
+    .project-item,
+    #error404 img {
+        width: 100%;
+        max-width: 500px;
+    }
+    .project-item h2 {
+        font-size: 18px;
+    }
+    br {
+        margin: 20px 0;
+    }
+    h3, a span, a span {
+        font-size: 21px;
+    }
+    .footer li a span,
+    .footer li a {
+        font-size: 25px;
+    }    
+    .footer ul li.footer-hidden {
+    	display: inline-block;
+    }
+}
+
+
+	/* ------------------------------------------------ 3. Mobiles 1 */
+
+@media only screen and (max-width: 768px) {
+
+    .main-container,
+    #project .main-container, 
+    #bio .main-container {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .project-item {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }  
+    canvas {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+	/* ------------------------------------------------ 3. Mobiles 2 */
+
+@media only screen and (max-width: 450px) {
+
+	.project-item {
+		width: 100%;
+		height: auto;
+		margin: 10px 0;
+	}
+	.project-item h2 {
+		height: auto;
+	}
+	.project-item img {
+		width: 100%;
+		height: auto;
+		border: 0;		
+	}
+}
